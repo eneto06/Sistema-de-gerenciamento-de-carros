@@ -33,7 +33,7 @@ def new_car_view(request):
         new_car_form = CarModelForm(request.POST, request.FILES)
         #Verifica se os dados do formulário estão válidos
         if new_car_form.is_valid():
-            #Salva no banco de dados o nosso carro cadastrado
+            #Salva no banco de dados o carro cadastrado pelo usuário
             new_car_form.save()
             #Redireciona o usuário para a lista de carros
             return redirect('cars_list')
